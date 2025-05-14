@@ -1,0 +1,32 @@
+[build-system]
+requires = ["flit_core >=3.2,<4"]
+build-backend = "flit_core.buildapi"
+
+[project]
+name = "speed_dating"
+version = "0.0.1"
+description = "Analyzing a speed dating experiment dataset, this project uses descriptive statistics and visualizations to uncover the factors that predict mutual interest in a second date, aiming to provide insights for Tinder to understand user preferences."
+authors = [
+  { name = "nclsprsnw" },
+]
+
+readme = "README.md"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    
+]
+requires-python = "~=3.13.0"
+
+
+[tool.ruff]
+line-length = 99
+src = ["speed_dating"]
+include = ["pyproject.toml", "speed_dating/**/*.py"]
+
+[tool.ruff.lint]
+extend-select = ["I"]  # Add import sorting
+
+[tool.ruff.lint.isort]
+known-first-party = ["speed_dating"]
+force-sort-within-sections = true
+
